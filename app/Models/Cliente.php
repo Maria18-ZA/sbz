@@ -15,4 +15,9 @@ class Cliente extends Model
     {
         return $this->hasMany(Medida::class)->latest('data_medicao');
     }
+
+    public function orcamentos(): HasMany
+{
+    return $this->hasMany(Orcamento::class);
+}
 }
